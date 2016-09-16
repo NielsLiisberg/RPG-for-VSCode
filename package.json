@@ -1,0 +1,54 @@
+{
+	"name": "RPG",
+	"displayName": "RPG",
+	"description": "RPG for IBMi",
+	"version": "0.1.0",
+	"icon": "rpg.jpg",
+	"publisher": "NielsLiisberg",
+	"readme": "README.md",
+	"author": {
+		"name": "Niels Liisberg"
+	},
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"keywords": [
+		"RPG",
+		"RPGLE",
+		"IBMI",
+		"AS/400"
+	],
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "rpg",
+				"aliases": [
+					"RPG",
+					"rpg"
+				],
+				"extensions": [
+					".rpg",
+					".aspx",
+					".asmx",
+					".rpgle"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "rpg",
+				"scopeName": "source.rpg",
+				"path": "./syntaxes/rpg.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "82248b3f-e978-444b-bd4b-40f5935691aa",
+		"publisherId": "5e44d29a-ac10-460d-ade0-8ae845cea985",
+		"publisherDisplayName": "Niels Liisberg"
+	}
+}
