@@ -8,6 +8,8 @@
 		<string>aspx</string>
 		<string>asmx</string>
 		<string>rpgle</string>
+		<string>sqlrpgle</string>
+		
 	</array>
 	<key>foldingStartMarker</key>
 	<string>(?i)(for|if|do|dow|dou|select|begsr|dcl-proc|dcl-pi|dcl-ds)</string>

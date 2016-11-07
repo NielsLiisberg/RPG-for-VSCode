@@ -2,7 +2,7 @@
 	"name": "RPG",
 	"displayName": "RPG",
 	"description": "RPG for IBMi",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"icon": "rpg.jpg",
 	"publisher": "NielsLiisberg",
 	"readme": "README.md",
@@ -33,7 +33,8 @@
 					".rpg",
 					".aspx",
 					".asmx",
-					".rpgle"
+					".rpgle",
+					".sqlrpgle"
 				],
 				"configuration": "./language-configuration.json"
 			}
