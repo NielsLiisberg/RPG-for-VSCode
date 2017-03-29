@@ -149,7 +149,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^[*]{2,2}</string>
+			<string>(?i)^[*]{2,2}(ctdata)?\ </string>
 			<key>comment</key>
 			<string>Compile time array in the bottom of the source file</string>
 			<key>end</key>
