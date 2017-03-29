@@ -12,9 +12,9 @@
 		
 	</array>
 	<key>foldingStartMarker</key>
-	<string>(?i)(for|if|do|dow|dou|select|begsr|dcl-proc|dcl-pi|dcl-ds)</string>
+	<string>(?i)(for|if|do|dow|dou|select|begsr|dcl-proc|dcl-pi|dcl-pr|dcl-ds)</string>
 	<key>foldingStopMarker</key>
-	<string>(?i)(endfor|endif|enddo|endsl|endsr|end-proc|end-pi|end-ds)</string>
+	<string>(?i)(endfor|endif|enddo|endsl|endsr|end-proc|end-pi|end-pr|end-ds)</string>
 	<key>grammaurl</key>
 	<string>http://manual.macromates.com/en/language_grammars#language_grammars</string>
 	<key>name</key>
@@ -73,13 +73,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(dcl-s|dcl-c|dcl-ds|end-ds|dcl-pi|end-pi)\b</string>
+			<string>(?i)\b(dcl-s|dcl-c|dcl-ds|end-ds|dcl-pi|end-pi|dcl-pr|end-pr)\b</string>
 			<key>name</key>
 			<string>storage.type.rpg</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)[*](ON|OFF|ENTRY|ALL|BLANK|BLANKS|ZERO|ZEROS|HIVAL|LOVAL)\b</string>
+			<string>(?i)[*](ON|OFF|ENTRY|ALL|BLANK|BLANKS|ZERO|ZEROS|HIVAL|LOVAL|PROC|USRCTL)\b</string>
 			<key>name</key>
 			<string>constant.language.rpg</string>
 		</dict>
