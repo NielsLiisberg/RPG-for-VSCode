@@ -6,6 +6,10 @@ Best regards
 
 Niels Liisberg 2016-2017
 
+Thank you for your contributions:
+Aaron Bartel, 
+Christian Jørgensen, 
+Andreas Louv, 
 
 
 
@@ -19,5 +23,9 @@ The compile is done with the IceBreak server, however a ssh version is on its wa
 The debugging is still under construction.
 
 ### 0.1.1
+Compile via node.js module via IceBreak.
+fix for all free RPG (CJ)
 
+
+### 0.1.0
 Initial release of RPG
