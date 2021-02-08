@@ -25,3 +25,6 @@ https://code.visualstudio.com/docs
 ## Install your extension
 * To start using your extension with Visual Studio Code copy it into the <user home>/.vscode/extensions folder and restart Code.
 * To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+
+## Themeing
+https://gist.github.com/vivainio/b89bd60a3f2c7bbb31f7e149d6cb8806

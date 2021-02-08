@@ -1,0 +1,130 @@
+{
+  "fileTypes": [
+    "rpg",
+    "aspx",
+    "asmx",
+    "rpgle",
+    "sqlrpgle"
+  ],
+  "foldingStartMarker": "(?i)(for|if|do|dow|dou|select|begsr|dcl-proc|dcl-pi|dcl-pr|dcl-ds)",
+  "foldingStopMarker": "(?i)(endfor|endif|enddo|endsl|endsr|end-proc|end-pi|end-pr|end-ds)",
+  "grammaurl": "http://manual.macromates.com/en/language_grammars#language_grammars",
+  "name": "rpg RPG",
+  "patterns": [
+    {
+      "begin": "(?i)\\b(ctl-opt)\\b",
+      "end": ";",
+      "name": "keyword.other.rpg"
+    },
+    {
+      "match": "(?i)\\b(for|if|do|dow|dou|select|begsr|endsr|endif|endsl|enddo|endfor)\\b",
+      "name": "keyword.control.rpg"
+    },
+    {
+      "match": "(?i)\\b(dcl-proc|end-proc)\\b",
+      "name": "keyword.control.rpg"
+    },
+    {
+      "match": "(?i)\\b(when|exsr|else|elseif|other)\\b",
+      "name": "keyword.control.rpg"
+    },
+    {
+      "match": "(?i)[\\%](abs|addr|alloc|bitand|bitnot|bitor|bitxor|char|check|checkr|date|days|dec|dech|decpos|diff|div|editc|editflt|editw|elem|eof|equal|error|fields|float|found|graph|hours|int|inth|kds|len|lookup|minutes|months|mseconds|nullind|occur|open|paddr|paddr|parms|realloc|rem|replace|scan|seconds|shtdn|size|sqrt|status|str|str|str|subdt|this|time|timestamp|tlookup|trim|triml|trimr|ucs2|uns|unsh|xfoot|xlate|years)\\b",
+      "name": "keyword.rpg"
+    },
+    {
+      "match": "(?i)\\b(not|and|or)\\b",
+      "name": "keyword.control.rpg"
+    },
+    {
+      "match": "(?i)\\b(not|acq|add|adddur|alloc|bitoff|biton|cab|call|callb|callp|cas|cat|chain|check|checkr|clear|close|commit|comp|dealloc|define|delete|div|dsply|dump|eval|evalr|except|exfmt|exsr|extrct|feod|force|goto|in|iter|kfld|klist|leave|leavesr|lookup|mhhzo|mhlzo|mlhzo|mllzo|monitor|move|movea|movel|mult|mvr|next|occur|on|open|or|other|out|parm|plist|post|read|readc|reade|readp|readpe|realloc|rel|return|reset|rolbk|scan|setgt|setll|setoff|seton|shtdn|sorta|sqrt|sub|subdur|subst|tag|test|testb|testn|testz|time|unlock|update|write|xfoot|xlate|z-add|z-sub)\\b",
+      "name": "keyword.rpg"
+    },
+    {
+      "match": "(?i)^\\s*(/free|/end-free|/include|/copy)\\b",
+      "name": "keyword.rpg"
+    },
+    {
+      "match": "(?i)\\b(var)\\b",
+      "name": "storage.rpg"
+    },
+    {
+      "match": "(?i)\\b(zoned|varying|varucs2|vargraph|varchar|value|uns|ucs2|tofile|timfmt|timestamp|time|template|static|sqltype|rtnparm|qualified|psds|procptr|prefix|pos|pointer|perrcd|packeven|packed|overlay|options|opdesc|occurs|object|noopt|likerec|likefile|likeds|like|len|inz|ind|int|import|graph|fromfile|float|extproc|extpgm|extname|extfmt|extfld|ext|export|dtaara|dim|descend|datfmt|date|ctdata|const|class|char|ccsid|bindec|based|ascend|altseq|alt|align|alias)\\b",
+      "name": "entity.name.function.rpg"
+    },
+    {
+      "match": "(?i)\\b(dcl-s|dcl-c|dcl-ds|dcl-f|end-ds|dcl-pi|end-pi|dcl-pr|end-pr)\\b",
+      "name": "storage.type.rpg"
+    },
+    {
+      "match": "(?i)[*](INLR|ON|OFF|NULL|ENTRY|ALL|BLANK|BLANKS|ZERO|ZEROS|HIVAL|LOVAL|PROC|USRCTL)\\b",
+      "name": "constant.language.rpg"
+    },
+    {
+      "begin": "\\%\\>",
+      "end": "\\<\\%",
+      "name": "meta.preprocessor.string.rpg"
+    },
+    {
+      "begin": "\\/\\*",
+      "end": "\\*\\/",
+      "name": "comment.block.rpg"
+    },
+    {
+      "begin": "(?i)^[ \\t]{0,5}[ hfdc][*]",
+      "end": "\\n",
+      "name": "comment.block.rpg"
+    },
+    {
+      "begin": "\\/\\/",
+      "end": "\\n",
+      "name": "comment.block.rpg"
+    },
+    {
+      "begin": "\\'",
+      "end": "\\'",
+      "name": "string.quoted.single.rpg",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "constant.character.escape.rpg"
+        }
+      ]
+    },
+    {
+      "begin": "\\`",
+      "end": "\\`",
+      "name": "string.quoted.single.rpg",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "constant.character.escape.rpg"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^[ \\t]*(exec)\\s+(sql)\\b",
+      "end": "\\;",
+      "name": "support.constant.rpg",
+      "patterns": [
+        {
+          "include": "SQL"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^[*]{2,2}(ctdata)?\\ ",
+      "comment": "Compile time array in the bottom of the source file",
+      "end": "(E-*-O-*-F)",
+      "name": "string.quoted.single.rpg",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "constant.character.escape.rpg"
+        }
+      ]
+    }
+  ],
+  "scopeName": "source.rpg",
+  "uuid": "f43aff62-4f12-4328-9cbb-a8a7a3f1cfef"
+}

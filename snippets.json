@@ -1,0 +1,143 @@
+{
+	"dcl-s  - Declare standalone variable": {
+		"prefix": "dcl-s",
+		"body": [
+			"dcl-s ${1:name}\t${2:type};"
+		],
+		"description": "Declare standalone variable"
+	},
+
+	"dow - Do while": {
+		"prefix": "dow",
+		"body": [
+			"dow $1;",
+			"\t$2",
+			"enddo;"
+		],
+		"description": "if statement"
+	},
+	"if - If / end": {
+		"prefix": "if",
+		"body": [
+			"if $1;",
+			"\t$2",
+			"endif;"
+		],
+		"description": "if statement"
+	},
+	"if - If / else /  end": {
+		"prefix": "if",
+		"body": [
+			"if $1;",
+			"\t$2",
+			"else;",
+			"\t",
+			"endif;"
+		],
+		"description": "if statement"
+	},
+	"if - if / elseif / else /  endif": {
+		"prefix": "if",
+		"body": [
+			"if $1;",
+			"\t$2",
+			"elseif;",
+			"\t",
+			"else;",
+			"\t",
+			"endif;"
+		],
+		"description": "if statement"
+	},
+	"select - select / when / other / endsl": {
+		"prefix": "select",
+		"body": [
+			"select;",
+			"\twhen $1;",
+			"\tother;",
+			"endsl;"
+		],
+		"description": "select statement"
+	},
+	"when - select statement": {
+		"prefix": "when",
+		"body": [
+			"when $1;"
+		],
+		"description": "when  in select statement"
+	},
+	"other - select statement ": {
+		"prefix": "when",
+		"body": [
+			"when $1;"
+		],
+		"description": "when  in select statement"
+	},
+	"dcl-proc - Declare procedure": {
+		"prefix": "proc",
+		"body": [
+			"// ------------------------------------------------------------------------------------",
+			"// ${1:name}",
+			"// ------------------------------------------------------------------------------------",
+			"dcl-proc $1;",
+			"",
+			"\tdcl-pi $1 ;",
+			"\tend-pi;",
+			"",
+			"\t$2",
+			"",
+			"\treturn;",
+			"end-proc;"
+		],
+		"description": "Declare procedure declaration"
+	},
+
+	"exsr - Execute subrutine": {
+		"prefix": "exsr",
+		"body": [
+			"exsr ${1:subrutine};"
+		],
+		"description": "Execute subrutine"
+	},
+	"exsr - Execute and declare subrutine": {
+		"prefix": "exsrbegsr",
+		"body": [
+			"exsr ${1:subrutine};",
+			"// -------------------------------------------------------------------------------",
+			"// ${1:subrutine}",
+			"// -------------------------------------------------------------------------------",
+			"begsr  ${1:subrutine};",
+			"\t$2",
+			"endsr;"
+		],
+		"description": "Declare and execute subrutine"
+	},
+	"read loop": {
+		"prefix": "read loop",
+		"body": [
+			"setll *loval ${1:filename};",
+			"read  ${1:filename};",
+			"dow not %EOF(${1:filename});",
+			"\t$2",
+			"\tread  ${1:filename};",
+			"enddo;"
+		],
+		"description": "Declare and execute subrutine"
+	},
+	"main - main body and main procedure": {
+		"prefix": "main",
+		"body": [
+			"ctl-opt copyright('Company');",
+			"ctl-opt decEdit('0,') datEdit(*YMD.);",
+			"ctl-opt BndDir('QC2LE');",
+			"ctl-opt main(main); ",
+			"// ------------------------------------------------------------------------------------",
+			"// Main entry procedure",
+			"// ------------------------------------------------------------------------------------",
+			"dcl-proc main;",
+			"\t${1:yourcode}",
+			"end-proc;"
+		],
+		"description": "Main body and main procedure"
+	}
+}
